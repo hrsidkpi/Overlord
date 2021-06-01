@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Overlord.Controls.TaskEditForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Overlord.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+	<Grid Background="{StaticResource Primary}">
+		<local:PlaceholderTextbox x:Name="TaskTitle" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" PlaceholderText="Task Title" VerticalAlignment="Top" Width="272" Height="47" Margin="0,10,0,0"/>
+
+		<TextBlock FontSize="15" HorizontalAlignment="Center" Margin="0,75,0,0" Text="Select Due Date" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+		<DatePicker Name="TaskDueDate" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" BorderThickness="0" Foreground="{StaticResource Text}"/>
+
+		<TextBlock FontSize="15" HorizontalAlignment="Center" Margin="0,139,0,0" Text="Select Due Time" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+		<local:TimePickerView x:Name="TaskDueTime" Height="52" Width="100" Margin="350,164,350,0" VerticalAlignment="Top" />
+
+		<Button x:Name="ConfirmButton" Content="Confirm" Width="100" Height="50" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Click="ConfirmButton_Click" Background="Transparent" Cursor="Hand" Foreground="White"/>
+
+		<ComboBox x:Name="SelectedGoal" HorizontalAlignment="Center" Margin="0,268,0,0" VerticalAlignment="Top" Width="120"/>
+		<TextBlock FontSize="15" HorizontalAlignment="Center" Margin="0,243,0,0" Text="Select Goal" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+	</Grid>
+</UserControl>

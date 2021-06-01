@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Logic\Database\SQLite\TASKer.db" />
+    <None Remove="res\Home.png" />
+    <None Remove="res\Lock_16x.svg" />
+    <None Remove="res\M2PLight-oyqA.ttf" />
+    <None Remove="res\Roboto-Regular.ttf" />
+    <None Remove="res\SquadaOne-Regular.ttf" />
+    <None Remove="res\Trash_16x.svg" />
+    <None Remove="res\Unlock_16x.svg" />
+    <None Remove="res\User_16x.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="res\Home.png" />
+    <Resource Include="res\Lock_16x.svg" />
+    <Resource Include="res\M2PLight-oyqA.ttf" />
+    <Resource Include="res\Roboto-Regular.ttf" />
+    <Resource Include="res\SquadaOne-Regular.ttf" />
+    <Resource Include="res\Trash_16x.svg" />
+    <Resource Include="res\Unlock_16x.svg" />
+    <Resource Include="res\User_16x.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Logic\Database\SQLite\Overlord.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
